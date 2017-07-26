@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a point (1)</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="800" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+      <!-- <button type="button" onclick="spinDown()">Spin << </button> -->
+    <button type="button" onclick="TankrunStop()"> TankRunStop</button>
+      <button type="button" onclick="BirdrunStop()">BirdRunStop </button>
+
+      <button type="button" onclick="TankSwitch()">TankSwitch</button>
+      <button type="button" onclick="BirdSwitch()">BirdSwitch</button>
+    </p>
+    <h3> User Instruction </h3>
+      <p>1. The bird are composed of several "jointed" parts, including 2D and 3D objects, like that robot arm.</p>
+      <p>2. Only when the button "BirdOn" is clicked can the bird be dragged by mouse.</p>
+      <p>3. The tank are composed of three 3D parts, and upper part and cannon can spin seperately.</p>
+      <p>4. The tank can move horizontally, which can be controlled by two methods: keyboard and the button "TankrunStop".</p>
+      <p>5. The tank can launch cannon balls continuously, which can happen when the mouse is clicked.</p>
+      <p>6. The cannon balls which are launched have their own direction, which is determined by the click position.</p>
+      <p>7. The color of canvas can change when the window size varies.</p>
+      <p>8. whether the bird is still or not can be controlled by the button "BirdrunStop".</p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-mod.js"></script>
+    <script src="projectA_1.js"></script>
+  </body>
+</html>

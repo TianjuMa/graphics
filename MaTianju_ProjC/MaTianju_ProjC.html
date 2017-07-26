@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <body id="mainBody">
+
+    <table id = "mainTable">
+      <tr>
+        <td align="right">
+          <div id="canvas">
+            <body onload="main()" onresize="winResize()">
+
+              <canvas id="webgl" width="400" height="400">
+                Please use a browser that supports "canvas"
+              </canvas>
+              <script src="lib/webgl-utils.js"></script>
+              <script src="lib/webgl-debug.js"></script>
+              <script src="lib/cuon-utils.js"></script>
+              <script src="lib/cuon-matrix-quat.js"></script>
+              <script src="lib/Material.js"></script>
+              <script src="lib/lights-JT.js"></script>
+              <script src="lib/shader.js"></script>
+              <script src="MaTianju_ProjC.js"></script>
+            </body>
+          </div>
+        </td>
+
+        <p>
+          <div id="instruction">
+            <table border="0">
+
+              <tr>
+                <td><h1>Instruction</h1></td>
+              </tr>
+
+              <tr>
+               <td>
+                <table>
+                    <tr>
+                      <td>Move Camera: W:forward; S:backward; A:left; D:right; Q:Up; E:Down; left arrow: turn left; right arrow: turn right.</td>
+                    </tr>
+                    <tr>
+                      <td>Move Lamp: I:foward K:backward J:left L:right U:Up O:Down</td>
+                    </tr>
+                    <tr> </tr>
+                  </table>
+               </td>
+              </tr>
+
+              <tr>
+                <td><h2>Choose shading Mode:</h2></td>
+                <td>
+                  <select id ="shadingMode">
+                    <option value = "1">Gauraud</option>
+                    <option value = "2">Phong</option>
+                  </select>
+                </td>
+                </tr>
+
+                <tr>
+                  <td><h2>Choose lighting Mode:</h2> </td>
+                  <td>
+                    <select id ="lightingMode">
+                      <option value = "1">Phong lighting</option>
+                      <option value = "2">Blinn-Phong lighting</option>
+                    </select>
+                  </td>
+                </tr>
+
+              <tr>
+                <td>
+                  <table>
+
+                    <tr>
+                      <td>
+                        <table>
+                          <tr>
+                            <td><h2>Moving Lamp</h2></td>
+                            <td><button type="button" onclick="moveLampSwitch()" id="moveLampSwitch">Off</button></td>
+                          </tr>
+                          <tr>
+                            <td><h2>Head Lamp</h2></td>
+                            <td><button type="button" onclick="headLampSwitch()" id="headLampSwitch">On</button></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p>
+                          Ambient:
+                          <p class='input-group'>
+                            R:&nbsp;<input id='ambient-r' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            G:&nbsp;<input id='ambient-g' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            B:&nbsp;<input id='ambient-b' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                          </p>
+                        </p>
+                        <p>
+                          Diffuse:
+                          <p class='input-group'>
+                            R:&nbsp;<input id='diffuse-r' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            G:&nbsp;<input id='diffuse-g' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            B:&nbsp;<input id='diffuse-b' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                          </p>
+                        </p>
+                        <p>
+                          Specular:
+                          <p class='input-group'>
+                            R:&nbsp;<input id='specular-r' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            G:&nbsp;<input id='specular-g' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                            B:&nbsp;<input id='specular-b' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+                          </p>
+                        </p>
+                      </td>
+                    </tr>
+
+                  </table>
+                </td>
+              </tr>
+      </tr>
+  </body>
+</html>

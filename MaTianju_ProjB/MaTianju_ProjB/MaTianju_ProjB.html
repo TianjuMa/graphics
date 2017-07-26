@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>351 ProjectB</title>
+  </head>
+
+  <body onload="main()" onresize="resize()">
+    <canvas id="webgl" width="600" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <h3> User Instruction </h3>
+      <p>1. Direction keys control: left arrow can make the eye location move left forward;
+         right arrow can make the eye location move right forward;
+         up arrow can make the eye location move forward;
+         bottom arrow can make the eye location move back.</p>
+      <p>2. W-A-S-D keys control: "A" key can make the camera spin left forward;
+         "D" key can make the camera spin right forward;
+         "W" key can make the camera aim up forward;
+         "S" key can make the camera aim lower forward.</p>
+      <p>3. Mouse drag: the balloon can be change direction if the mouse is dragged.</p>
+      <p>4. Window resize: The all objects can maintain same size once the window size is changed.</p>
+      <p>5. Defusion Object: The cube, the top face is much brighter than other faces.</p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-mod.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="MaTianju_ProjB.js"></script>
+  </body>
+</html>
